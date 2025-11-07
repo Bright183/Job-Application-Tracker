@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Streamlit and local data
+jobs.csv
+jobs_export.xlsx
+
+# Virtual environment
+venv/
+.env/
+
+# OS files
+.DS_Store
+Thumbs.db
