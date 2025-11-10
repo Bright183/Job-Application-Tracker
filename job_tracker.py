@@ -122,7 +122,15 @@ filtered_df = jobs_df[
 ]
 
 st.subheader(f"All Jobs ({len(filtered_df)})")
-st.dataframe(filtered_df, use_container_width=True)
+
+# Nmaes the Columns
+display_df = filtered_df.rename(columns={
+    "Title": "Title",
+    "Date Applied": "Date",
+    "URL": "Link"
+})[["Title", "Company", "Location", "Status", "Date", "Notes", "Link"]]
+
+st.dataframe(display_df, use_container_width=True)
 
 
 # =====  Export =====
@@ -142,3 +150,6 @@ if not jobs_df.empty:
         jobs_df = jobs_df.drop(delete_index).reset_index(drop=True)
         save_jobs(jobs_df)
         st.sidebar.success(f"Deleted job: {removed['Title']} at {removed['Company']}")
+
+
+
