@@ -7,6 +7,7 @@ A simple Streamlit web app to manage your job applications — add, search, filt
 - Filter and search your jobs
 - Export data to Excel
 - Clean UI built with Streamlit
+- User Authentication (Currently Only With My Info)
 
 ## Tech Stack
 - **Python**
